@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
   
 describe('Deve renderizar um campo de input',()=>{
     test('de valor', () => {
-        render(<Formulario />)
+       render(<Formulario />)
         const placeholder = screen.getByPlaceholderText("Digite um valor");
 
         expect(placeholder).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe('Deve renderizar um campo de input',()=>{
         expect(placeholder).toHaveAttribute('type', 'number');
     })  
 
-    test('que pode ser preechido', () => {
+    test('verifica que o valor foi preenchido', () => {
         render(<Formulario />)
         const campoTexto = screen.getByPlaceholderText("Digite um valor");
         userEvent.type(campoTexto, '50')

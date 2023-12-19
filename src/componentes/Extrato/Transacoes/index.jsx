@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Transacoes({ transacao, estilos }) {
+  console.log(transacao, estilos)
   return (
     <li>
       <p className={estilos.mes}>{transacao.mes}</p>
